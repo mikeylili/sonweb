@@ -13,12 +13,14 @@
     font-family: '쿠키런레귤러';
     font-weight: 1000;
     font-size: 30px;
+    text-align: center;
 }
 .letters{
     font-family: '쿠키런레귤러';
+    text-align: center;
 }
-p{
-    text-align: center
+.center{
+    text-align: center;
 }
 .box{
     width: 300px;
@@ -67,11 +69,50 @@ p{
 .container2 {
     width: 700px;
     height: 200px;
+    background-color:grey;
 }
-.head {
+.blog-content {
+    width: 70%;
+    height: 200px;
+    background-color: aqua;
+    float : left;
+    
+}
+.blog-head {
     width: 100%;
-    height: 70px;
+    height:30%;
+    padding-left: 30px;
+    float : left;
 }
-.profile2 {
-    width: 50px;
+.blog-body {
+    width: 80%;
+    height: 70%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.blog-profile {
+    width:50px;
+    float : left;
+}
+.blog-img {
+    width: 20%;
+    height: 200px;
+    background-color: black;
+    float : left;
+}
+.img {
+    width: 300px;
+}
+.name {
+    margin-bottom: 0px;
+}
+.time {
+    margin-top: 2px;
+    color:grey;
+    font-size: 12px;
+    font-family:gulim;
+
+}
+.blog-main{
+    font-weight: 1000;
 }
