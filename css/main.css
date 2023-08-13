@@ -1,3 +1,8 @@
+@font-face {
+    font-family: '쿠키런레귤러';
+    src: url(../font/CookieRun\ Regular.ttf);
+}
+
 .profile {
     width: 100px;
     display: block;
@@ -5,11 +10,12 @@
     margin-right: auto
 }
 .mainletters{
-    font-family: 'Cookierun Black';
+    font-family: '쿠키런레귤러';
+    font-weight: 1000;
     font-size: 30px;
 }
 .letters{
-    font-family: 'Cookierun Regular';
+    font-family: '쿠키런레귤러';;
 }
 p{
     text-align: center
@@ -26,7 +32,7 @@ p{
     border: 4px solid black;
     border-radius: 15px;
     font-size: 16px;
-    font-family: 'Cookierun Regular';
+    font-family: '쿠키런레귤러';;
     box-shadow: 20px 20px 20px grey;
 }
 .container {
@@ -41,10 +47,31 @@ p{
     width: 20%;
     height: 400px;
     background: cornflowerblue;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
+
 }
 .right{
     width: 80%;
     height: 400px;
-    background: coral
+    background: coral;
+    display: inline-block;
+
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+
+}
+.container2 {
+    width: 700px;
+    height: 200px;
+}
+.head {
+    width: 100%;
+    height: 70px;
+}
+.profile2 {
+    width: 50px;
 }
