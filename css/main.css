@@ -69,12 +69,10 @@
 .container2 {
     width: 700px;
     height: 200px;
-    background-color:grey;
 }
 .blog-content {
     width: 70%;
     height: 200px;
-    background-color: aqua;
     float : left;
     
 }
@@ -97,7 +95,6 @@
 .blog-img {
     width: 20%;
     height: 200px;
-    background-color: black;
     float : left;
 }
 .img {
@@ -111,8 +108,21 @@
     color:grey;
     font-size: 12px;
     font-family:gulim;
+    padding: 3cap;
 
 }
 .blog-main{
     font-weight: 1000;
+}
+.navbar li{
+    display: inline-block;
+    width:60px;
+    text-align: center;
+    background:#eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+.navbar a{
+    font-size:16px;
+    text-decoration: none;
 }
