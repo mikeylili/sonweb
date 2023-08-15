@@ -193,3 +193,18 @@
 .cookierun{
     font-family: '쿠키런레귤러';
 }
+.game-introduce{
+    background-color: #eee;
+    width: 70%;
+    text-align: center;
+    margin:auto;
+    margin-top: 30px;
+    padding: 40px;
+    height: auto;
+    border-radius: 10px;
+    font-family: '쿠키런레귤러';
+
+}
+.explain{
+    text-align: center;
+}
