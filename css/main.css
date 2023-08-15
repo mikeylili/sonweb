@@ -31,10 +31,10 @@ body {
     text-align: center;
 }
 .box{
-    width: 300px;
+    width: 350px;
     background-color: rgb(192, 163, 77);
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 40px;
     display: block;
     margin-left: auto;
