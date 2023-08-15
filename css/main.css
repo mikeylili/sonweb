@@ -1,3 +1,9 @@
+div {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+}
 @font-face {
     font-family: '쿠키런레귤러';
     src: url(../font/CookieRun\ Regular.ttf);
@@ -204,6 +210,8 @@
     height: auto;
     border-radius: 10px;
     font-family: '쿠키런레귤러';
+    max-width: 700px;
+    box-sizing: border-box;
 
 }
 .explain{
