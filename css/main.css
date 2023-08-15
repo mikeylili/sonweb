@@ -143,13 +143,14 @@
     font-size: 40px;
     margin-top: 100px;
     font-family: '쿠키런레귤러';
-    text-shadow: 10%;
+    text-shadow:1px 1px 1px #000;
 }
 .body-letters{
     margin-left: 10px;
     color: white;
     text-shadow: 100%;
     font-family: '쿠키런레귤러';
+    text-shadow:1px 1px 1px #000;
 }
 .download-button{
     margin-left: 10px;
