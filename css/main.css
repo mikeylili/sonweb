@@ -189,7 +189,7 @@ body {
 }
 .html-button{
     display: inline-block;
-    color: white;
+    color: rgb(46, 80, 134);
     background-color: rgb(218, 244, 214);
     font-family: '쿠키런레귤러';
     font-weight: 1000;
@@ -198,6 +198,10 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     margin: 20px;
+    cursor: pointer;
+}
+.html-button:active{
+    background-color: aquamarine;
 }
 .cookierun{
     font-family: '쿠키런레귤러';
@@ -367,4 +371,18 @@ table {
 }
 .cart-link:visited {
     color: rgb(238, 134, 238);
+}
+.f-small {
+    font-size:12px;
+}
+.f-mid {
+    font-size:16px;
+}
+.f-lg {
+    font-size:20px;
+}
+.main-btn {
+    padding: 15px;
+    border: none;
+    cursor: pointer;
 }
