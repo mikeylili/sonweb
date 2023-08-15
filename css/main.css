@@ -353,3 +353,18 @@ table {
     border-radius: 20px;
     cursor: pointer;
 }
+.cart-button:hover {
+    background-color: rgb(146, 61, 78);
+}
+.cart-button:focus{
+    background-color: grey;
+}
+.cart-button:active {
+    background-color: rgb(78, 6, 20);
+}
+.cart-link:link {
+    color:rgb(121, 121, 247);
+}
+.cart-link:visited {
+    color: rgb(238, 134, 238);
+}
