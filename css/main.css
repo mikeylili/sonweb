@@ -329,6 +329,7 @@ input::placeholder {
     font-family: '쿠키런레귤러';
 }
 .html-button{
+    font-size:80%;
     display: inline-block;
     color: rgb(46, 80, 134);
     background-color: rgb(218, 244, 214);
