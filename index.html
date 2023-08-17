@@ -69,25 +69,42 @@
         </a>
         
     </div>
-    <div class="flip-outer" style="margin:auto;">
+    <div class="flip-outer" style="margin:auto; position:relative; top: 100px;">
         <div class="flip-inner">
             <div class="front" style="background-color:black; width: 100%; height: 100%; border-radius:50%;"></div>
             <div class="back">
-                <h2>짜란~</h2>
+                <h2 style="color:black">짜란~</h2>
             </div>
         </div>
     </div>
     <div style="width:100%;height:30px"></div>
 
     <script>
-        $("body").on("mousewheel", function (e) {
-            var wheel = e.originalEvent.wheelDelta;
-          
-            if (wheel != 0) {
+        $(document).ready(function(){
+            setTimeout(function() {
                 $('.main-head-1').addClass('main-head-2');
+            }, 500);
+        });
+        var isVisible = false;
+
+        $(window).on('scroll',function() {
+            if (checkVisible($('.main-footer-1'))&&!isVisible) {
                 $('.main-footer-1').addClass('main-footer-2');
+                isVisible=true;
             }
-          });
+        });
+        
+        function checkVisible( elm, eval ) {
+            eval = eval || "object visible";
+            var viewportHeight = $(window).height(), // Viewport Height
+                scrolltop = $(window).scrollTop(), // Scroll Top
+                y = $(elm).offset().top,
+                elementHeight = $(elm).height();   
+            
+            if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+            if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+        }
+        
           var ts;
           $('html, body').bind('touchstart', function(e){
             e.stopPropagation();
@@ -98,10 +115,8 @@
             e.stopPropagation();
             var te = e. originalEvent.changedTouches[0].clientY;
             if(ts > te + 5){
-                $('.main-head-1').addClass('main-head-2');
                 $('.main-footer-1').addClass('main-footer-2');
             } else if(ts < te - 5){
-                $('.main-head-1').addClass('main-head-2');
                 $('.main-footer-1').addClass('main-footer-2');
             }
           });
