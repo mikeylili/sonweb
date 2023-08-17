@@ -497,7 +497,7 @@ table {
     visibility: hidden;
     position: relative;
     top:200px;
-    
+    font-size: 100%;;
     opacity: 0;
     transition: all 1s;
 }
@@ -505,6 +505,5 @@ table {
     visibility: visible;
     position: relative;
     top:100px;
-    
     opacity: 1;
 }
