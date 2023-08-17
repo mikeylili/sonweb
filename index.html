@@ -19,7 +19,7 @@
 <body>
     <div class="main-head-1">
         <img src = "img/프로필.webp" class = "profile">
-        <h3 class = "cookierun" style="color: skyblue; text-align: center">son</h3>
+        <h3 class = "cookierun" style="color: skyblue; text-align: center;margin-top:30px;">son</h3>
         <p  class = "cookierun" style="text-align: center">
         <span>SUNRIN</span>
         <span style="color:rgb(255, 111, 0); font-weight: 900px;">INTERNET
@@ -83,10 +83,22 @@
         $("body").on("mousewheel", function (e) {
             var wheel = e.originalEvent.wheelDelta;
           
-            if (wheel > 0) {
-
-              console.log("올리는 중");
-            } else {
+            if (wheel != 0) {
+                $('.main-head-1').addClass('main-head-2');
+            }
+          });
+          var ts;
+          $('html, body').bind('touchstart', function(e){
+            e.stopPropagation();
+            ts = e.originalEvent.touches[0].clientY;
+          });
+          
+          $('html, body').bind('touchend', function(e){
+            e.stopPropagation();
+            var te = e. originalEvent.changedTouches[0].clientY;
+            if(ts > te + 5){
+                $('.main-head-1').addClass('main-head-2');
+            } else if(ts < te - 5){
                 $('.main-head-1').addClass('main-head-2');
             }
           });
