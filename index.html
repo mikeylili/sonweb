@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link href="css/main.css" rel="stylesheet">
     <style>
@@ -12,49 +13,53 @@
         a:focus { text-decoration: none; }
         a:hover, a:active { text-decoration: none; }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <img src = "img/프로필.webp" class = "profile">
-    <h3 class = "cookierun" style="color: skyblue; text-align: center">son</h3>
-    <p  class = "cookierun" style="text-align: center">
+    <div class="main-head-1">
+        <img src = "img/프로필.webp" class = "profile">
+        <h3 class = "cookierun" style="color: skyblue; text-align: center">son</h3>
+        <p  class = "cookierun" style="text-align: center">
         <span>SUNRIN</span>
         <span style="color:rgb(255, 111, 0); font-weight: 900px;">INTERNET
         </span>
         <span>HIGH SCHOOL student</span>
-    <div class="box">
-        <p class="mainletters">소개글</p>
-        <p class="letters" >안녕하세요오 소온흐이차앙이입니이다아~</p>
-        <p class="letters">
-            <span style = "color: rgb(252, 185, 114)">쿠키런</span> 못하고요~
-        </p>
-        <p class="letters">
-            <span style = "font-size: 30px; color: red">바보</span>입니당
-        </p>
-        <a href ="https://brand.naver.com/cookierun">
-            <p class="letters">그냥 여기로 오세요~(!)</p>
-        </a>
+        <div class="box">
+            <p class="mainletters">소개글</p>
+            <p class="letters" >안녕하세요오 소온흐이차앙이입니이다아~</p>
+            <p class="letters">
+                <span style = "color: rgb(252, 185, 114)">쿠키런</span> 못하고요~
+            </p>
+            <p class="letters">
+                <span style = "font-size: 30px; color: red">바보</span>입니당
+            </p>
+            <a href ="https://brand.naver.com/cookierun">
+                <p class="letters">그냥 여기로 오세요~(!)</p>
+            </a>
+        </div>
+        <p class="letters" style="color: rgb(161, 155, 155);margin-top: 40px">※ '(!)'는 외부 링크이며 제가 만든게 아닙니다.</p>
     </div>
-    <p class="letters" style="color: rgb(161, 155, 155);margin-top: 40px">※ '(!)'는 외부 링크이며 제가 만든게 아닙니다.</p>
     <div class="main-footer">
         <h3 class="footer-letters">손희창의 html 작품 보기</h3>
-        <a href = "homwk1.html">
+        <a href = "blog.html">
             <button class="html-button">
                 <p>김진호의 블로그</p>
             </button>
         </a>
-        <a href = "layout1.html">
+        <a href = "layout.html">
             <button class="html-button">
                 <p>공사 중</p>
             </button>
         </a>
-        <a href = "layout2.html">
+        <a href = "game.html">
             <button class="html-button">
                 <p>쿠킹덤 다운로드 페이지</p>
             </button>
         </a>
-        <a href = "homwk2.html">
+        <a href = "coupon.html">
             <button class="html-button">
-                <p>양식 제출 페이지</p>
+                <p>ㅁㅜㄹ:/ㅋㅜ포L사0ㅣ트</p>
             </button>
         </a>
         <a href = "cart.html">
@@ -73,5 +78,24 @@
         </div>
     </div>
     <div style="width:100%;height:30px"></div>
+
+    <script>
+        $("body").on("mousewheel", function (e) {
+            var wheel = e.originalEvent.wheelDelta;
+          
+            if (wheel > 0) {
+
+              console.log("올리는 중");
+            } else {
+                $('.main-head-1').addClass('main-head-2');
+            }
+          });
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 </html>
