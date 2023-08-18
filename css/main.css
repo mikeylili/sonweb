@@ -490,10 +490,10 @@ table {
 .main-footer-1{
     width: auto;
     height: auto;
-    margin: 50px;
+    margin: 10px;
     text-align: center;
     background-color:#eee;
-    padding: 30px;
+    padding: 10px;
     border-radius: 20px;
     visibility: hidden;
     position: relative;
