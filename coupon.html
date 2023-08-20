@@ -10,11 +10,11 @@
     </script>
     <title>Document</title>
   </head>
-  <body>
-
+  <body style="background-color:rgb(200, 199, 227)">
+    <span class="badge" id="change-mode" style="float:right; cursor: pointer;background-color:black">Dark mode</span>
     <div class="black-bg">
         <div class="white-bg">
-          <h4 id="login-content">로그인하세요</h4>
+          <h4 id="login-content" class="cookierun">로그인하세요</h4>
           <form action="success.html">
             <div class="my-3">
               <input type="text" class="form-control" placeholder="id">
@@ -22,15 +22,19 @@
             <div class="my-3">
               <input type="password" class="form-control" placeholder="password">
             </div>
-             <button type="submit" class="btn btn-primary" id="send">전송</button>
-             <button type="button" class="btn btn-danger" id="close">닫기</button>
+             <button type="submit" class="btn btn-primary cookierun" id="send">전송</button>
+             <button type="button" class="btn btn-danger cookierun" id="close">닫기</button>
           </form> 
-          <a href="signin.html"><p style="margin-top: 10px">회원가입하기</p></a>
+          <a href="signin.html"><p class="cookierun" style="margin-top: 10px">회원가입하기</p></a>
         </div>
     </div> 
     <div class="main-bg">
-      <h4>Crystals for free</h4>
+      <h4 class="cookierun">Crystals for free</h4>
       <button type="button" class="btn btn-info cookierun main-btn" id = "open">쿠킹덤 무료 크리스탈 쿠폰 받기</button>
+    </div>
+    <div class = "alert alert-danger cookierun">
+      <span id="more-give-text" style="position:relative; left:3px">60</span>
+      <span>초 이내 로그인시 쿠키커터 30개 + 무지개큐브 3000개 추가 증정!</span>
     </div>
     
 
@@ -50,7 +54,55 @@
           alert('아이디와 비밀번호를 정확히 기입하세요.');
           return false;
        }
+        if($(':password').val().length < 6){
+          alert('비밀번호는 6자 이상이여야 합니다.')
+          return false;
+        }
       })
+      $(':text').on('change', function(){
+        $(':text').css('border-color', 'black')
+      })
+      $(':password').on('change', function(){
+        $(':password').css('border-color', 'black')
+      })
+      var i = 0;
+      $('#change-mode').on('click', function(){
+        i += 1;
+        if (i % 2 == 1){
+          $('#change-mode').text('Light mode');
+          $('#change-mode').css({'color': 'black', 'background-color': 'white'});
+          $('body').css('color', 'white');
+          $('.main-bg').css('background-color', 'black');
+          $('.white-bg').css('background-color', 'black');
+          $(':text').css('background-color', 'grey');
+          $(':password').css('background-color', 'grey');
+          $('input').addClass('white-placeholder');
+          $('body').css('background-color', 'rgb(123, 124, 137)')
+          $('.alert').addClass('alert-change');
+        }
+        else{
+          $('#change-mode').text('Dark mode')
+          $('#change-mode').css({'color': 'white', 'background-color': 'black'});
+          $('body').css('color', 'black');
+          $('.main-bg').css('background-color', 'lightgrey');
+          $('.white-bg').css('background-color', 'white');
+          $(':text').css('background-color', 'white');
+          $(':password').css('background-color', 'white');
+          $('input').removeClass('white-placeholder');
+          $('body').css('background-color', 'rgb(200, 199, 227)');
+          $('.alert').removeClass('alert-change');
+        }
+        
+      })
+      var second = 60;
+      setInterval(function(){
+        second -= 1;
+        if (second <= 0){
+          $('.alert').hide()
+        }
+        $('#more-give-text').text(second);
+      }, 1000)
+
 
     </script>
 

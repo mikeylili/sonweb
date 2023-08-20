@@ -508,3 +508,10 @@ table {
     top:100px;
     opacity: 1;
 }
+.white-placeholder::-webkit-input-placeholder {
+    color: white;
+}
+.alert-change{
+    color: rgb(226, 204, 204);
+    background-color: rgb(127, 82, 82);
+}
