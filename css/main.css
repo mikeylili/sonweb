@@ -2,6 +2,9 @@
     font-family: '쿠키런레귤러';
     src: url(../font/CookieRun\ Regular.ttf);
 }
+:root{
+    scroll-behavior: auto;
+}
 div {
     box-sizing: border-box;
 }
@@ -548,4 +551,13 @@ table {
 }
 .slide-box img {
     width: 100%;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.navbar-brand {
+    font-size: 30px;
+    transition: all 0.5s;
 }
