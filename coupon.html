@@ -39,29 +39,31 @@
     
     <div style = "overflow:hidden">
       <div class="slide-container">
-        <div class="slide-box">
+        <div class="slide-box" id="img1">
           <img src="img/1.png">
         </div>
-        <div class="slide-box">
+        <div class="slide-box" id="img2">
           <img src="img/2.png">
         </div>
-        <div class="slide-box">
+        <div class="slide-box" id="img3">
           <img src="img/3.png">
         </div>
-        <div class="slide-box">
+        <div class="slide-box" id="img4">
           <img src="img/4.png">
         </div>
-        <div class="slide-box">
+        <div class="slide-box" id="img5">
           <img src="img/5.png">
         </div>
       </div>
     </div>
-    <div style="text-align: center">
+    <div style="text-align: center" class="cookierun">
+      <button class="prev">Prev</button>
       <button class="slide-1">1</button>
       <button class="slide-2">2</button>
       <button class="slide-3">3</button>
       <button class="slide-4">4</button>
       <button class="slide-5">5</button>
+      <button class="next">Next</button>
       <div style="width:100%; height: 100px;">
     </div>
     
@@ -69,20 +71,73 @@
 
 
     <script>
+      var picture = 1;
+
+      $('.next').on('click', function(){
+        if (picture != 5){
+          $('.slide-container').css('transform', 'translateX(-'+picture * 60+'vw)');
+          $('#img'+ picture).removeClass('slide-box-change');
+          $('#img' + (picture + 1)).addClass('slide-box-change');
+          picture+=1;
+        }
+        
+      })
+
+      $('.prev').on('click', function(){
+        if (picture != 1){
+          $('.slide-container').css('transform', 'translateX(-'+((picture * 60)-120) +'vw)');
+          $('#img'+ picture).removeClass('slide-box-change');
+          $('#img' + (picture - 1)).addClass('slide-box-change');
+          picture-=1;
+        }
+      })
+
+
+      $('#img1').addClass('slide-box-change');
       $('.slide-1').on('click', function(){
         $('.slide-container').css('transform', 'translateX(0vw)');
+        $('#img1').addClass('slide-box-change');
+        $('#img2').removeClass('slide-box-change');
+        $('#img3').removeClass('slide-box-change');
+        $('#img4').removeClass('slide-box-change');
+        $('#img5').removeClass('slide-box-change');
+        picture = 1;
       })
       $('.slide-2').on('click', function(){
         $('.slide-container').css('transform', 'translateX(-60vw)');
+        $('#img1').removeClass('slide-box-change');
+        $('#img2').addClass('slide-box-change');
+        $('#img3').removeClass('slide-box-change');
+        $('#img4').removeClass('slide-box-change');
+        $('#img5').removeClass('slide-box-change');
+        picture = 2;
       })
       $('.slide-3').on('click', function(){
         $('.slide-container').css('transform', 'translateX(-120vw)');
+        $('#img1').removeClass('slide-box-change');
+        $('#img2').removeClass('slide-box-change');
+        $('#img3').addClass('slide-box-change');
+        $('#img4').removeClass('slide-box-change');
+        $('#img5').removeClass('slide-box-change');
+        picture = 3;
       })
       $('.slide-4').on('click', function(){
         $('.slide-container').css('transform', 'translateX(-180vw)');
+        $('#img1').removeClass('slide-box-change');
+        $('#img2').removeClass('slide-box-change');
+        $('#img3').removeClass('slide-box-change');
+        $('#img4').addClass('slide-box-change');
+        $('#img5').removeClass('slide-box-change');
+        picture = 4;
       })
       $('.slide-5').on('click', function(){
         $('.slide-container').css('transform', 'translateX(-240vw)');
+        $('#img1').removeClass('slide-box-change');
+        $('#img2').removeClass('slide-box-change');
+        $('#img3').removeClass('slide-box-change');
+        $('#img4').removeClass('slide-box-change');
+        $('#img5').addClass('slide-box-change');
+        picture = 5;
       })
     </script>
 

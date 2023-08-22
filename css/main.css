@@ -540,6 +540,11 @@ table {
     width:60vw;
     float: left;
     padding-bottom: 50px;
+    opacity: 0;
+    transition: all 2s;
+}
+.slide-box-change {
+    opacity: 1;
 }
 .slide-box img {
     width: 100%;
