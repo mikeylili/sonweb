@@ -531,3 +531,16 @@ table {
     color: rgb(226, 204, 204);
     background-color: rgb(127, 82, 82);
 }
+.slide-container {
+    width:300vw;
+    margin-left: 20%;
+    transition: all 1s;
+}
+.slide-box {
+    width:60vw;
+    float: left;
+    padding-bottom: 50px;
+}
+.slide-box img {
+    width: 100%;
+}

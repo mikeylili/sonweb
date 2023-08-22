@@ -17,7 +17,7 @@
           <h4 id="login-content" class="cookierun">로그인하세요</h4>
           <form action="success.html">
             <div class="my-3">
-              <input type="text" class="form-control" placeholder="id">
+              <input type="text" class="form-control" placeholder="email">
             </div>
             <div class="my-3">
               <input type="password" class="form-control" placeholder="password">
@@ -37,8 +37,51 @@
       <span>초 이내 로그인시 쿠키커터 30개 + 무지개큐브 3000개 추가 증정!</span>
     </div>
     
+    <div style = "overflow:hidden">
+      <div class="slide-container">
+        <div class="slide-box">
+          <img src="img/1.png">
+        </div>
+        <div class="slide-box">
+          <img src="img/2.png">
+        </div>
+        <div class="slide-box">
+          <img src="img/3.png">
+        </div>
+        <div class="slide-box">
+          <img src="img/4.png">
+        </div>
+        <div class="slide-box">
+          <img src="img/5.png">
+        </div>
+      </div>
+    </div>
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="slide-4">4</button>
+    <button class="slide-5">5</button>
+    <div style="width:100%; height: 100px;">
+    </div>
 
 
+    <script>
+      $('.slide-1').on('click', function(){
+        $('.slide-container').css('transform', 'translateX(0vw)');
+      })
+      $('.slide-2').on('click', function(){
+        $('.slide-container').css('transform', 'translateX(-60vw)');
+      })
+      $('.slide-3').on('click', function(){
+        $('.slide-container').css('transform', 'translateX(-120vw)');
+      })
+      $('.slide-4').on('click', function(){
+        $('.slide-container').css('transform', 'translateX(-180vw)');
+      })
+      $('.slide-5').on('click', function(){
+        $('.slide-container').css('transform', 'translateX(-240vw)');
+      })
+    </script>
 
     <script>
       $('#close').on('click', function(){
