@@ -116,7 +116,8 @@
       window.addEventListener('scroll', function(){
         var 스크롤양 = document.querySelector('html').scrollTop;
         var 높이 = document.querySelector('html').clientHeight;
-        $('.nav-line').css('width', +(스크롤양 / 높이) * 100+'%');
+        var 실제높이 = document.querySelector('html').scrollHeight;
+        $('.nav-line').css('width', +((스크롤양) / (실제높이 - 높이)) * 100+'%');
       })
       
     </script>
