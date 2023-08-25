@@ -19,6 +19,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
+      <div class="nav-line"></div>
     </nav>
     <div class="black-bg">
         <div class="white-bg">
@@ -111,6 +112,11 @@
         if (스크롤양 + 높이 >= 실제높이 - 1){
           alert('귀하는 모든 개인정보 수집에 동의하였습니다.');
         }
+      })
+      window.addEventListener('scroll', function(){
+        var 스크롤양 = document.querySelector('html').scrollTop;
+        var 높이 = document.querySelector('html').clientHeight;
+        $('.nav-line').css('width', +((스크롤양) / 높이) * 100+'%');
       })
     </script>
 

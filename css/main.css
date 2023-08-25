@@ -561,3 +561,9 @@ table {
     font-size: 30px;
     transition: all 0.5s;
 }
+.nav-line {
+    background-color: black;
+    position: relative;
+    top: 9px;
+    height: 1px;
+}
