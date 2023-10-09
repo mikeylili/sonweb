@@ -22,6 +22,12 @@ var 실제높이 = document.querySelector('html').scrollHeight;
 $('.nav-line').css('width', +((스크롤양) / (실제높이 - 높이)) * 105+'%');
 })
 
+document.querySelector('.black-bg').addEventListener('click', function(e){
+    if(e.target == document.querySelector('.black-bg')){
+        document.querySelector('.black-bg').classList.remove('show-modal-black');
+        document.querySelector('.white-bg').classList.remove('show-modal-white');
+    }
+})
 
 
 
@@ -31,7 +37,9 @@ $('.nav-line').css('width', +((스크롤양) / (실제높이 - 높이)) * 105+'%
 
 
 var picture = 1;
-
+if (picture == 1){
+    $('.prev').css('visibility', 'hidden');
+}
 $('.next').on('click', function(){
 if (picture != 5){
     $('.slide-container').css('transform', 'translateX(-'+picture * 60+'vw)');
@@ -49,7 +57,24 @@ if (picture != 1){
     $('#img' + (picture - 1)).addClass('slide-box-change');
     picture-=1;
 }
+
 })
+$('#page').on('click', function(){
+    if (picture == 1){
+        $('.prev').css('visibility', 'hidden');
+    }
+    if (picture != 1){
+        $('.prev').css('visibility', 'visible');
+    }
+    if (picture == 5){
+        $('.next').css('visibility', 'hidden');
+    }
+    if (picture != 5){
+        $('.next').css('visibility', 'visible');
+    }
+})
+
+
 
 
 $('#img1').addClass('slide-box-change');
